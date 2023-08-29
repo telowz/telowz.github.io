@@ -1,37 +1,78 @@
- .projects {
-    font-size: 28px;
-    margin-top: 5px;
-    margin-left: 1075px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@600&display=swap');
+
+:root{
+	--pointOfFocusComplementary: #d4c1a3;
+	--pointOfFocus: #dda074;
+	--background: #55465f;
+	--backgroundComplementary: #8e707b;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+html {
+	scrollbar-width: none;
+}
+
 body {
-    background: linear-gradient(black,indigo,violet,purple,indigo, black);
-    background-repeat: no-repeat;
-    height: 100vh;
-    overflow-x: hidden;
-    margin: 0;
+	background-color: var(--background);
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
 }
-.left-box {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 12%;
-    height: 100%;
-    background-color: black;
+
+section {
+	display: grid;
+	place-items: center;
+	width: 100vw;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	overflow-x: hidden;
 }
-.telowz {
-    background: transparent;
-    color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-left: 30px;
-    padding: 10px;
+
+#underConstructionText{
+	font-size: 7vw;
+	color: var(--pointOfFocus);
+	font-family: 'REM', sans-serif;
+	cursor: default;   
 }
-.top-box {
-    position: fixed;
-    top: 0;
-    left: 12%;
-    width: 100%;
-    height: 12%;
-    background-color: black;
+
+@keyframes moveUpAndDown {
+	0% {
+    	transform: translate(0, -300px);
+	}
+	100% {
+    	color: #d8b97500 !important;
+    	transform: translate(0, 300px);
+	}
+}
+
+#downArrow{
+	color: #d8b975 !important;
+	animation-iteration-count: infinite;
+	animation-name: moveUpAndDown;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+
+footer{
+	display: grid;
+	place-items: center;
+    
+	height: 33vh;
+
+	background-color: var(--backgroundComplementary);
+	overflow: visible;
+	font-family: 'REM', sans-serif;
+	top: 100%;
+}
+
+.text{
+	text-align: center;
+	color: var(--pointOfFocusComplementary);
 }
